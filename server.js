@@ -12,6 +12,9 @@
  */
 
 require('dotenv').config();
+process.on('uncaughtException', (err) => {
+  console.error('CRASH:', err.message);
+});
 const express = require('express');
 const twilio = require('twilio');
 const Anthropic = require('@anthropic-ai/sdk');
