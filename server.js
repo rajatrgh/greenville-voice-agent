@@ -24,7 +24,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // ── Clients ──────────────────────────────────────────
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const anthropic = new Anthropic({ 
   apiKey: process.env.ANTHROPIC_API_KEY,
   timeout: 30000,
